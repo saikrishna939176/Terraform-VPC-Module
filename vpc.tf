@@ -83,6 +83,7 @@ resource "aws_db_subnet_group" "default" {
         }
     )
 }
+
 resource "aws_route_table" "public" {
     vpc_id = aws_vpc.main.id
 
