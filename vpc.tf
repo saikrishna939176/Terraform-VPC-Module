@@ -133,6 +133,11 @@ resource "aws_route" "public_route" {
 #   destination_cidr_block = "0.0.0.0/0"
 # }
 
+
+resource "aws_route53_zone" "route53_zone" {
+  name = var.aws_route53_zone # Replace with your domain
+}
+
 resource "aws_route_table_association" "public" {
     count = length(var.public_subnet_cidr)
   subnet_id      = element(aws_subnet.public[*].id, count.index)

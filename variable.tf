@@ -82,6 +82,9 @@ variable "aws_route_database_table_tags" {
     type = map
     default ={}
 }
+variable "aws_route53_zone" {
+    default = "daws78s.online"
+}
 variable "is_peering_connection" {
     type = bool
     default = false
